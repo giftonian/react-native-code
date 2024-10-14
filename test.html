@@ -87,6 +87,81 @@
    let heading1 = document.querySelector("h1"); // "#eleId"  , ".myClass"
    //heading1.innerText = "This is new Heading";
 
+   let num1 = 7, num2 = 10;
+   function addNum(a, b) {
+    return a + b;
+   }
+   console.log("Sum of " + num1 + " and "+num2 +" is = " + addNum(num1, num2));
+
+   let arrowAdd = (a, b) => {
+    return a + b;
+   }
+   // let arrowAdd = (a, b) => a + b;
+
+   console.log("Sum of " + num1 + " and "+num2 +" using Arrow funnction is = " + arrowAdd(num1, num2));
+
+   // Object
+   const userObj = {
+    name: "Ahmad",
+    age: 18,
+    greet() {
+        console.log("Hi "+this.name);
+    }
+   }
+   userObj.greet();
+
+   // Class example
+   class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log("welcome from JS class to " + this.name)
+    }
+   }
+
+   const userInstance = new User("Omar", 19);
+   userInstance.greet();
+
+   // 1D Array
+   const users = ["Ahmad", "Omar"]; // access with users[i]
+   console.log(users.length)
+
+   // 2D Array
+   const usersData = [
+    ["Ahmad", 18, "Lahore"],
+    ["Omar", 16, "Gujranwala"]
+   ]
+   console.log(usersData)
+
+   // Array of objects
+   const objArr = [
+    {
+        name: "Huzaifa",
+        age: 10        
+    },
+    {
+        name: "Hamza",
+        age: 9
+    }
+   ];
+
+   console.log(objArr[0])
+
+   const index = users.findIndex( (item) => {
+    return item === "Omar"
+   }
+   ); // or const index = users.findIndex( (item) => item === "Omar");
+
+   console.log("Index of name Omar in users array is = " + index)
+
+   const ucUsers = users.map( (item) => {
+    return item.toUpperCase();
+   }
+   );
+   console.log(ucUsers);
 
 
    
