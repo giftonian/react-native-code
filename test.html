@@ -1,0 +1,95 @@
+<!DOCTYPE html> <!-- specifies that the page is written in HTML5, the latest standard of HTML -->
+<html lang="en"> <!-- telling the browsers/screen-readers about primary language of this page-->
+<head>
+    <meta charset="UTF-8"> <!-- encoding standard for large set of characters, It ensures that text (especially non-English characters) is displayed correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        It makes the webpage responsive and adjusts its layout for mobile devices. The viewport defines the visible area of a web page, and this tag controls how it behaves on different screen sizes.
+        width=device-width: Sets the width of the page to the device's screen width.
+        initial-scale=1.0: Ensures the initial zoom level of the page is set to 1.0, which prevents automatic zooming.
+    -->
+
+    <script type="text/javascript">
+
+    </script>
+    <title>Welcome to Mobile Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mobile Application Development</h1>
+    </header>
+    <section>
+        <h2>I am Waqas Tariq</h2>
+        <p>This is a sample HTML page created for demonstration purpose.</p>
+        <ul>
+            <li>This page has a header, section, and footer.</li>
+            <li>Basic styling is applied using internal CSS.</li>
+            <li>It is mobile-friendly using the viewport meta tag.</li>
+        </ul>
+
+        <div id="list-content-div">
+            add content with JS here....
+        </div>
+    </section>
+    <footer>
+        <p>Copyright &copy; 2024 PUGC</p>
+    </footer>
+<script type="text/javascript">
+    // alert("Hello alert using internal javascript")
+</script>
+<script src="scripts/script.js" type="module"></script>
+
+<script type="text/javascript">
+    // logText("This is new to me");
+
+    /* Add content into <div> with JS
+    const listContentDiv = document.getElementById("list-content-div")
+    let listContent = "";
+    // add items in listContent using a loop
+    for (i=0; i<5; i++) {
+        listContent += "<li>Item "+i+"</li>";
+    }
+    const list = document.createElement("ul");
+    //listContentDiv.innerHTML = ""; // clear existing content
+    list.innerHTML = listContent; // insert new content
+    listContentDiv.append(list); 
+    */
+
+   // querySelector()
+   let heading1 = document.querySelector("h1"); // "#eleId"  , ".myClass"
+   //heading1.innerText = "This is new Heading";
+
+
+
+   
+</script>
+</body>
+</html>
