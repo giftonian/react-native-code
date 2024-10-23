@@ -32,3 +32,10 @@ Oct, 2024
 - Select React and JavaScript in next steps
 - npm install
 - npm run dev
+
+# References
+1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+2. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+3. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
+4. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+5. https://www.paulsblog.dev/advanced-javascript-concepts-to-write-high-quality-code-that-scales/

@@ -163,6 +163,133 @@
    );
    console.log(ucUsers);
 
+   // User-defined callback example
+   // Define a function that takes another function as a parameter
+    function executeFunction(callback) {
+        console.log("Before executing the callback function");        
+        // Call the function passed as an argument
+        callback();        
+        console.log("After executing the callback function");
+    }
+
+    // Define another function to pass as a parameter
+    function helloWorld() {
+        console.log("Hello, world!");
+    }
+
+    // Call the higher-order function and pass `sayHello` as an argument
+    executeFunction(helloWorld);
+
+   // Functions as values
+   /*setTimeout(() => {
+    console.log("3 sec passed")
+   }, 3000);*/
+
+   // Functions inside Function
+   function parentFunction() {
+    console.log("Parent function called..start");
+    
+    function childFunction() {
+        console.log("Child function body execution inside parent function")
+    }
+
+    console.log("some logic of parent function")
+
+    childFunction();
+   }
+
+   parentFunction();
+   // childFunction(); // error
+
+   // let and const
+   let x = 50;
+   if (x === 50) {
+    let x = 100;
+    console.log("x inside if = "+x);
+   }
+   console.log("x outside if = "+x);
+
+   const pi = 3.14;
+   // pi = 3.1472547; //
+
+   const skills = ["Java", "Python"];
+   console.log(skills);
+   console.log("skills length = "+ skills.length)
+   skills.push("NodeJs");  
+   console.log("skills new length = "+ skills.length)
+   console.log(skills)
+   // above code will show same/updated contents in the browser console because it display the array by reference, and referene is updated with the new element
+   // to show actual contents, do the following by copying the array elements
+   const skillsNew = ["React", "Vue"];
+   console.log([...skillsNew]);  // Create a copy of the array
+   skillsNew.push("React Native");
+   console.log([...skillsNew]);
+
+
+   // Asynchronous Programming
+
+   // Callback example
+   skills.forEach((skill) => console.log(skill.toUpperCase()));
+   function myForEach(arr, cb) {
+    for (let i=0; i< arr.length; i++) {
+        console.log("some logic here...");
+        cb(arr[i]);
+    }
+   }
+
+   myForEach(skills, (ele) => {
+    console.log("Displaying skill: "+ ele.toLowerCase())
+   });
+
+   // Callback Async example
+//    fetch('https://dummyjson.com/users/1')
+//     .then(res => res.json())
+//     .then(console.log);
+
+   // Callbacks Example
+   function getUser(userId, callback) {
+        setTimeout(() => {
+            console.log("Fetching user..."+userId);
+            callback({ userId: userId, name: "John Doe" });
+        }, 1000);
+    }
+
+    function getOrders(user, callback) {
+        setTimeout(() => {
+            console.log(`Fetching orders for ${user.name}...`);
+            callback([{ orderId: 1 }, { orderId: 2 }]);
+        }, 1000);
+    }
+
+    getUser(101,
+        (user) => {
+            console.log("userID is "+user.userId+" and Name is "+user.name);
+        }
+    );
+
+    /*function getOrderDetails(order, callback) {
+        setTimeout(() => {
+            console.log(`Fetching details for order ${order.orderId}...`);
+            callback({ orderId: order.orderId, item: "Laptop", price: 1200 });
+        }, 1000);
+    }
+
+    // Initiating the callback hell
+    getUser(101, (user) => {
+        getOrders(user, (orders) => {
+            getOrderDetails(orders[0], (orderDetails) => {
+                console.log("Order Details:", orderDetails);
+            });
+        });
+    });*/
+
+ 
+
+   // ./ Asynchronous Programming
+
+   
+
+
 
    
 </script>
