@@ -26,6 +26,8 @@ Oct, 2024
 
     - Selecting first element of the document of given CSS selector **document.querySelector()** 
 
+## Lecture 00 - Introduction to React
+- 
 ### New React App
 - After installing NodeJs:
 - npm create vite@latest
@@ -39,3 +41,4 @@ Oct, 2024
 3. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 4. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 5. https://www.paulsblog.dev/advanced-javascript-concepts-to-write-high-quality-code-that-scales/
+6. https://www.youtube.com/watch?v=c-0P67cxTbI

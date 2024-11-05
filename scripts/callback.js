@@ -8,16 +8,18 @@ console.log("Welcome to Callbacks Learning");
 
    // Another callback hell example with solution
 
-   function register(cb, str) {
+   function register(cb) {
     setTimeout(() => {
-        console.log("Register ends here..." + str);
-        cb({to: "waqastariqdar@gmail.com", from:"admin@pugc.com", message:"This is welcome email"});
+        console.log("Register ends here...");
+        const emailObj = {to: "waqastariqdar@gmail.com", from:"admin@pugc.com", message:"This is welcome email"};
+        cb(emailObj);
     }, 2000);    
    }
    
-   function sendEmail(cb) {
+   function sendEmail(emailObj, cb) {
     setTimeout(() => {
-        console.log("Email ends here...");
+        console.log(emailObj)
+        console.log("Email ends here...");        
         cb();
     }, 1000);    
    }
@@ -44,16 +46,16 @@ console.log("Welcome to Callbacks Learning");
     }, 1000);    
    }
 
-   register(function (emailObject) {
-    //console.log(emailObject);     
-    sendEmail(() => {                
+   register( (emailObject) => {
+    //console.log(emailObject)  
+    sendEmail(emailObject, () => {                
         login(() => {
             getData(function () {
                 displayData();
             });            
         });        
     });    
-   }, "TEST");  
+   });  
 
    console.log("Remaining app code not dependent on above user regisration/login/display scenario");
    
