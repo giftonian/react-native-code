@@ -1,10 +1,10 @@
 // Welcome.jsx
 import React from 'react';
 
-function Welcome({ name }) {
+function Welcome(props) { // ({name, city})  // object destructuring
   return (
     <div>
-      <h1>Hello, {name}!</h1>
+      <h1>Hello, {props.name}! from {props.city}</h1>
       <p>Welcome to PUGC!</p>
     </div>
   );
