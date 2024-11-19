@@ -35,6 +35,12 @@ Oct, 2024
 - npm install
 - npm run dev
 
+### Hooks
+- **useState()** is used to propagate the update/state in the UI.
+    - without using useState(), you may update the JS variable's value, but it will not be reflected in the UI.
+    - You may assign any value (variable, array, object, etc) to the state variable.
+- **useEffect()** is called during component life cycle events e.g., init, re-render, unmount.
+
 # References
 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 2. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
