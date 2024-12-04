@@ -21,7 +21,13 @@ export default function App() {
       </View>
     </View>
     <View style={styles.box2}>
-      <Text>This is sample view for layout example</Text>
+    <View style={{ flex: 1, flexDirection: 'row' }}>
+      <View style={{ flex: 1, backgroundColor: 'red' }} />
+      <View style={{ flex: 2, backgroundColor: 'blue' }} >
+
+      </View>
+    </View>
+
     </View>
     </>
   );
