@@ -22,7 +22,13 @@ export default function App() {
 
 const styles = StyleSheet.create({
   mainBox: {
-    padding: 50,
+    flex: 1, // to occupy all available space on the screen
+    padding: 10,
+    borderColor: 'red',
+    borderWidth: 2,
+    margin: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
     flexDirection: 'column-reverse'
   },
   box1: {
