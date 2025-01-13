@@ -1,4 +1,4 @@
-import {Text,TextInput, View, Button, StyleSheet, Modal, Image} from 'react-native';
+import {Text,TextInput, View, Button, StyleSheet, Modal, Image, Alert} from 'react-native';
 import { useState } from 'react';
 
 function GoalInput(props)
@@ -14,6 +14,10 @@ function GoalInput(props)
     {
         props.onAddGoal(goalText);
         setGoalText('');
+        console.log("this is log")
+        Alert.alert("wow! A new goal")
+        //console.warn("a goal added -warn")
+        //console.error("this is an error message")
     }
 
     return (
