@@ -4,12 +4,16 @@ import CategoryGridTile from '../components/CategoryGridTile';
 import { CATEGORIES } from '../data/dummy-data';
 
 function CategoriesScreen({ navigation }) {
-  function renderCategoryItem(itemData) {
-    function pressHandler() {
-      navigation.navigate('MealsOverview');
+  
+  function renderCategoryItem(itemData) { // to render individual item
+    
+    function pressHandler() { // Press handler for individual tile
+      navigation.navigate('MealsOverview', { // passing to next screen
+        categoryId: itemData.item.id,
+      });
     }
 
-    return (
+    return (  // This is individual item/Tile UI
       <CategoryGridTile
         title={itemData.item.title}
         color={itemData.item.color}
