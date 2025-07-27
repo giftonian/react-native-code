@@ -4,9 +4,10 @@ import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
 
 export default function App() {
     const [textColor, setTextColor] = useState('green');
+    
     function setColor()
     {
-        setTextColor(textColor === 'red' ? 'green' : 'red');
+        setTextColor(textColor === 'red' ? 'green' : 'red'); // there are other ways to update the state variable
     }
   return (
     <View style={styles.container}>

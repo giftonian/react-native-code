@@ -8,15 +8,16 @@ export default function App() {
   function goalInputHandler(inputText) 
   {
     //console.log(inputText)
-    setGoalText(inputText)    
+    setGoalText(inputText) // update the value of goalText i.e., a state variable    
   }
 
   function addGoalHandler()
   {
     //console.log(goalText)
     updateGoalsList(currentGoals => [...currentGoals, goalText]) // React's state updates are asynchronous
-    setGoalText("");
-    // console.log(goalsList)
+    setGoalText(""); // assign state variable the empty string
+    // updateGoalsList([...currentGoals, goalText]) // not recommended
+    // console.log(goalsList) // error, bcz state updates are Asynch
   }
   return (
     <View style={styles.appContainer}>
@@ -44,7 +45,8 @@ const styles = StyleSheet.create({
   appContainer: {
     flex: 1, // Parent container occupying the all available space on screen, what if you remove/comment it?
     paddingTop: 50,
-    paddingHorizontal: 16
+    paddingHorizontal: 16,
+    backgroundColor: 'white',
   },
   inputContainer: {
     flex: 1,

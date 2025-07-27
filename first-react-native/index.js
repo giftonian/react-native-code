@@ -1,8 +1,8 @@
 import { registerRootComponent } from 'expo';
 
-//import App from './examples/05-Navigation'
+import App from './examples/05-Navigation'
 //import App from './game/App'
-import App from './rest-api/App'
+//import App from './App'
 
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);

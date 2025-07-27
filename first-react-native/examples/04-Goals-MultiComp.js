@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     flex: 1, // Parent container occupying the all available space on screen, what if you remove/comment it?
     paddingTop: 50,
     paddingHorizontal: 16,
+    backgroundColor: 'white',
     //backgroundColor: '#d2a799'
     
   },  

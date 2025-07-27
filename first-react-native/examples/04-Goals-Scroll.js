@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
   appContainer: {
     flex: 1, // Parent container occupying the all available space on screen, what if you remove/comment it?
     paddingTop: 50,
-    paddingHorizontal: 16
+    paddingHorizontal: 16,
+    backgroundColor: '#FFFFFF'
   },
   inputContainer: { 
     flex: 1,   
