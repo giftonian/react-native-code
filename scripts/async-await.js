@@ -16,8 +16,8 @@ function register() {
    
    function sendEmail(userData) {
     return new Promise ( (resolve, reject) => {
-        setTimeout(() => {return reject("email problem")
-            console.log("Sending email to :", userData.name);
+        setTimeout(() => {//return reject("email problem")
+            console.log("Sending email to ::", userData.name);
             console.log("Email ends here...");
             resolve();        
         }, 1000);
